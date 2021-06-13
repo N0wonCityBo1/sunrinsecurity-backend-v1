@@ -8,8 +8,9 @@ ADD ./ /server
 
 RUN npm install yarn; \
     yarn install; \
-    npm run build
+    yarn add ts-node
+    
 
 EXPOSE 3000
 
-CMD [ "yarn", "start"]
+CMD [ "yarn", "test"]

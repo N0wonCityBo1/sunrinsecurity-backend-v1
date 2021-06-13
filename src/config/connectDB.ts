@@ -4,7 +4,7 @@ import env from "config/env"
 const db = mongoose.connection
 const DB_URI =
     process.env.NODE_ENV === "test"
-        ? "mongodb://localhost:27017/test"
+        ? "mongodb://mongodb:27017/test"
         : env.DB_URI
 db.on("error", (err) => {
     console.log(`Failed to connect to mongoDB server ${DB_URI}`)
